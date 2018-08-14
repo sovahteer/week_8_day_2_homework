@@ -5,7 +5,9 @@ public enum ExtensionType {
     TXT(".txt"),
     RB(".rb"),
     JAVA(".java"),
-    PPT(".ppt");
+    PPT(".ppt"),
+    JPG(".jpg"),
+    DOCX(".docx");
 
     private String extension;
 
