@@ -25,7 +25,7 @@ public class Runner {
 
         List<Folder> folders = DBHelper.getAll(Folder.class);
 
-//        List<File> foldersFiles = DBFolder.getFilesInFolder(pics);
+        List<File> foldersFiles = DBFolder.getFilesInFolder(pics);
 
     }
 }

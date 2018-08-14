@@ -9,7 +9,6 @@ import org.hibernate.criterion.Restrictions;
 import java.util.List;
 
 public class DBHelper {
-
     private static Transaction transaction;
     private static Session session;
 

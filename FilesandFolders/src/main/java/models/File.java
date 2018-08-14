@@ -1,5 +1,7 @@
 package models;
 
+import javax.persistence.*;
+
 public class File {
 
     private int id;
@@ -16,6 +18,9 @@ public class File {
         this.folder = folder;
     }
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -24,20 +29,25 @@ public class File {
         this.id = id;
     }
 
+    @ManyToOne
+    @JoinColumn(name = "Folder_id", nullable = false)
+    public Folder getFolder(){
+        return folder;
+    }
+
+    @Column(name = "name")
     public String getName() {
         return name;
     }
 
+    @Enumerated(value = EnumType.STRING)
     public ExtensionType getExtension() {
         return extension;
     }
 
+    @Column(name = "size")
     public int getSize(){
         return size;
-    }
-
-    public Folder getFolder() {
-        return folder;
     }
 
     public void setName(String name) {
