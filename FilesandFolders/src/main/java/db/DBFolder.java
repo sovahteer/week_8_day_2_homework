@@ -10,7 +10,6 @@ import org.hibernate.criterion.Restrictions;
 import java.util.List;
 
 public class DBFolder {
-
     private static Session session;
 
     public static List<File> getFilesInFolder(Folder folder){

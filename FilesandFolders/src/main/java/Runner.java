@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Runner {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         Folder pics = new Folder("Pics" );
         DBHelper.save(pics);
@@ -21,7 +21,11 @@ public class Runner {
         File file2 = new File("Letter_of_Resignation", ExtensionType.DOCX, 6, documents);
         DBHelper.save(file2);
 
-        List<File> foldersFiles = DBFolder.getFilesInFolder(pics);
+        List<File> files = DBHelper.getAll(File.class);
+
+        List<Folder> folders = DBHelper.getAll(Folder.class);
+
+//        List<File> foldersFiles = DBFolder.getFilesInFolder(pics);
 
     }
 }
