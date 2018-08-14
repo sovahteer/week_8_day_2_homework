@@ -1,3 +1,4 @@
+import db.DBFolder;
 import db.DBHelper;
 import models.ExtensionType;
 import models.File;
@@ -20,6 +21,7 @@ public class Runner {
         File file2 = new File("Letter_of_Resignation", ExtensionType.DOCX, 6, documents);
         DBHelper.save(file2);
 
-        
+        List<File> foldersFiles = DBFolder.getFilesInFolder(pics);
+
     }
 }
